@@ -1,0 +1,42 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ]
+        },
+        {
+            "name":"HPS",
+        
+        // 头⽂件路径配置，请根据⾃⼰的安装⽬录修改
+        "includePath": [
+        "${workspaceFolder}/*",
+        "C:/intelFPGA/18.1/embedded/ip/altera/hps/altera_hps/hwlib/include",
+        
+        "C:/intelFPGA/18.1/embedded/ip/altera/hps/altera_hps/hwlib/include/soc_cv_av",
+        "C:/intelFPGA/18.1/embedded/ds-5/sw/gcc/arm-linux-gnueabihf/libc/usr/include",
+        // ARM Compiler 的版本号不⽤⼀定是 6.10.1
+        "C:/intelFPGA/18.1/embedded/ds-5/sw/ARMCompiler6.10.1/include"
+        ],
+        "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+        ],
+        "compilerPath": "",
+        "intelliSenseMode": "linux-gcc-arm",
+        "configurationProvider": "ms-vscode.makefile-tools"
+        }
+
+
+
+
+    ],
+    "version": 4
+}

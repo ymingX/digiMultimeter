@@ -1,0 +1,11 @@
+
+
+A:/whu/EI/Cyclone5DE10/project/osc/DE10_Standard_GHRD/pll.v
+
+Jun 27 04PM:08:19>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+A:/whu/EI/Cyclone5DE10/project/osc/DE10_Standard_GHRD/pll.v
+
+Jun 27 04PM:08:20>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

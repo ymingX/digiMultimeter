@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https: /go.microsoft.com/fwlink/? linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    // 注意： Windows 下在路径中请使⽤双反斜杠“\\”
+    {
+    "name": "(gdb) Launch",
+    "type": "cppdbg",
+    "request": "launch",
+    // 更改为你编译⽣成的可执⾏⽂件的路径
+    "program": "A:\\whu\\EI\\Cyclone5DE10\\HPS\\multimeter\\Debug\\multimeter",//D/DE10_Workspace/DE10_GHRD_Instrument/software 
+    "args": [],
+    "stopAtEntry": false,
+    "cwd": "${fileDirname}",
+    "environment": [],
+    "externalConsole": false,
+    "MIMode": "gdb",
+    // 上⼀步中下载的 arm-linux-gnueabihf-gdb.exe 的路径
+    "miDebuggerPath": "A:\\whu\\EI\\Cyclone5DE10\\HPS\\arm-linux-gnueabihf-gdb.exe",
+    // DE10 的 IP 地址，冒号后⾯的端⼝号可以⾃⾏修改
+    "miDebuggerServerAddress": "192.168.137.2:5050",
+    "setupCommands": [
+    {
+    //保存后打开 VS Code 左侧边栏的“运⾏和调试”，看⻅出现刚刚编辑的配置即可。
+    //2.3 启动调试
+    //在 DE10 上使⽤如下命令启动 gdbserver
+    //运⾏后应该有如下返回
+    //回到 VS Code 中，使⽤ F5 或右上⻆的调试按钮开始调试。
+    "description": "Enable pretty-printing for gdb",
+    "text": "-enable-pretty-printing",
+    "ignoreFailures": true
+    },
+    {
+    "description": "Set Disassembly Flavor to Intel",
+    "text": "-gdb-set disassembly-flavor intel",
+    "ignoreFailures": true
+    }
+    ]
+    }
+    ]
+    }

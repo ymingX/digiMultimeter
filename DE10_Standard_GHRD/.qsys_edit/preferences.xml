@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="271" />
+   <irq preferredWidth="63" />
+   <export preferredWidth="236" />
+   <name preferredWidth="258" />
+   <description preferredWidth="249" />
+   <endaddress preferredWidth="114" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library,Project,Library/Interface Protocols,Library/University Program/Communications,Library/Interface Protocols/Serial,Library/University Program" />
+ <window width="2326" height="1822" x="1513" y="18" />
+ <hdlexample language="VERILOG" />
+ <generation path="_PROJECT_NAME_" />
+</preferences>

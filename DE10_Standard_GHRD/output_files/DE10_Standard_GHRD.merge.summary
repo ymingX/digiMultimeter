@@ -1,0 +1,17 @@
+Partition Merge Status : Successful - Tue Jul 18 18:22:31 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : DE10_Standard_GHRD
+Top-level Entity Name : DE10_Standard_GHRD
+Family : Cyclone V
+Logic utilization (in ALMs) : 10,860 / 41,910 ( 26 % )
+Total registers : 12468
+Total pins : 338 / 499 ( 68 % )
+Total virtual pins : 32
+Total block memory bits : 2,059,520 / 5,662,720 ( 36 % )
+Total DSP Blocks : 3 / 112 ( 3 % )
+Total HSSI RX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
+Total HSSI TX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 9 ( 0 % )
+Total PLLs : 1 / 15 ( 7 % )
+Total DLLs : 1 / 4 ( 25 % )

@@ -1,0 +1,16 @@
+
+
+A:/whu/EI/Cyclone5DE10/project/multimeter/DE10_Standard_GHRD/pll.v
+
+Jul 23 05PM:20:24>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+A:/whu/EI/Cyclone5DE10/project/multimeter/DE10_Standard_GHRD/pll.v
+
+Jul 23 05PM:20:32>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+A:/whu/EI/Cyclone5DE10/project/multimeter/DE10_Standard_GHRD/pll.v
+
+Jul 23 05PM:20:40>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

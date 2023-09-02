@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.ino": "arduino-output",
+        "*.vt": "verilog",
+        "*.v": "verilog",
+        "*.md": "markdown",
+        "socal.h": "c",
+        "mman.h": "c",
+        "math.h": "c"
+    }
+}

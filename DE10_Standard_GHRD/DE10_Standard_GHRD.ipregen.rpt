@@ -1,0 +1,509 @@
+IP Upgrade report for DE10_Standard_GHRD
+Tue May 02 17:37:49 2023
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Successfully Upgraded IP Components
+  4. Failed Upgrade IP Components
+  5. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; IP Upgrade Summary                                                             ;
++------------------------------+-------------------------------------------------+
+; IP Components Upgrade Status ; Passed - Tue May 02 17:37:49 2023               ;
+; Quartus Prime Version        ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
+; Revision Name                ; DE10_Standard_GHRD                              ;
+; Top-level Entity Name        ; DE10_Standard_GHRD                              ;
+; Family                       ; Cyclone V                                       ;
++------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Successfully Upgraded IP Components                                                                                                                                   ;
++-------------+------------------------------+---------+----------------------------------+--------------------------------+----------------------------------+---------+
+; Entity Name ; Component Name               ; Version ; Original Source File             ; Generation File Path           ; New Source File                  ; Message ;
++-------------+------------------------------+---------+----------------------------------+--------------------------------+----------------------------------+---------+
+; hps_reset   ; In-System Sources and Probes ; 16.1    ; ip/altsource_probe/hps_reset.qip ; ip/altsource_probe/hps_reset.v ; ip/altsource_probe/hps_reset.qip ;         ;
++-------------+------------------------------+---------+----------------------------------+--------------------------------+----------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Failed Upgrade IP Components                                                                                                                                        ;
++-------------+----------------+---------+-------------------------------------+----------------------+-----------------+---------------------------------------------+
+; Entity Name ; Component Name ; Version ; Original Source File                ; Generation File Path ; New Source File ; Message                                     ;
++-------------+----------------+---------+-------------------------------------+----------------------+-----------------+---------------------------------------------+
+; soc_system  ; Qsys           ; 16.1    ; soc_system/synthesis/soc_system.qip ; soc_system.qsys      ;                 ; Error upgrading Qsys file "soc_system.qsys" ;
++-------------+----------------+---------+-------------------------------------+----------------------+-----------------+---------------------------------------------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "ip/altsource_probe/hps_reset.v" to "ip/altsource_probe/hps_reset.BAK.v"
+Info (11837): Started upgrading IP component In-System Sources and Probes with file "ip/altsource_probe/hps_reset.v"
+Info (11902): Backing up file "soc_system.qsys" to "soc_system.BAK.qsys"
+Info (11902): Backing up file "soc_system/synthesis/soc_system.v" to "soc_system.BAK.v"
+Info (11837): Started upgrading IP component Qsys with file "soc_system.qsys"
+Info: 2023.05.02.17:34:47 Info: Starting to upgrade the IP cores in the Qsys system
+Info: 2023.05.02.17:34:47 Info: Finished upgrading the ip cores
+Info: 2023.05.02.17:35:02 Info: Saving generation log to A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system
+Info: 2023.05.02.17:35:02 Info: Starting: Create simulation model
+Info: 2023.05.02.17:35:02 Info: qsys-generate "A:\OneDrive - whu.edu.cn\whu\EI\Cyclone5DE10\Demonstration\SoC_FPGA\DE10_Standard_GHRD\soc_system.qsys" --simulation=VERILOG --allow-mixed-language-simulation --output-directory="A:\OneDrive - whu.edu.cn\whu\EI\Cyclone5DE10\Demonstration\SoC_FPGA\DE10_Standard_GHRD\soc_system\simulation" --family="Cyclone V" --part=5CSXFC6D6F31C6
+Info: 2023.05.02.17:35:02 Info: Loading DE10_Standard_GHRD
+Info: 2023.05.02.17:35:02 Info: Reading input file
+Info: 2023.05.02.17:35:02 Info: Adding ILC [interrupt_latency_counter 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module ILC
+Info: 2023.05.02.17:35:02 Info: Adding button_pio [altera_avalon_pio 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module button_pio
+Info: 2023.05.02.17:35:02 Info: Adding clk_0 [clock_source 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module clk_0
+Info: 2023.05.02.17:35:02 Info: Adding dipsw_pio [altera_avalon_pio 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module dipsw_pio
+Info: 2023.05.02.17:35:02 Info: Adding f2sdram_only_master [altera_jtag_avalon_master 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module f2sdram_only_master
+Info: 2023.05.02.17:35:02 Info: Adding fpga_only_master [altera_jtag_avalon_master 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module fpga_only_master
+Info: 2023.05.02.17:35:02 Info: Adding hps_0 [altera_hps 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module hps_0
+Info: 2023.05.02.17:35:02 Info: Adding hps_only_master [altera_jtag_avalon_master 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module hps_only_master
+Info: 2023.05.02.17:35:02 Info: Adding jtag_uart [altera_avalon_jtag_uart 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module jtag_uart
+Info: 2023.05.02.17:35:02 Info: Adding led_pio [altera_avalon_pio 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module led_pio
+Info: 2023.05.02.17:35:02 Info: Adding mm_bridge_0 [altera_avalon_mm_bridge 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module mm_bridge_0
+Info: 2023.05.02.17:35:02 Info: Adding sysid_qsys [altera_avalon_sysid_qsys 17.0]
+Info: 2023.05.02.17:35:02 Info: Parameterizing module sysid_qsys
+Info: 2023.05.02.17:35:02 Info: Building connections
+Info: 2023.05.02.17:35:02 Info: Parameterizing connections
+Info: 2023.05.02.17:35:02 Info: Validating
+Info: 2023.05.02.17:35:09 Info: Done reading input file
+Info: 2023.05.02.17:35:13 Info: soc_system.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2023.05.02.17:35:13 Info: soc_system.dipsw_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2023.05.02.17:35:13 Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2023.05.02.17:35:13 Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2023.05.02.17:35:13 Warning: soc_system.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2023.05.02.17:35:13 Warning: soc_system.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2023.05.02.17:35:13 Info: soc_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: 2023.05.02.17:35:13 Info: soc_system.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: 2023.05.02.17:35:13 Info: soc_system.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Info: 2023.05.02.17:35:14 Info: soc_system: Generating soc_system "soc_system" for SIM_VERILOG
+Info: 2023.05.02.17:35:19 Info: Interconnect is inserted between master hps_0.h2f_lw_axi_master and slave mm_bridge_0.s0 because the master is of type axi and the slave is of type avalon.
+Info: 2023.05.02.17:35:22 Info: Interconnect is inserted between master hps_only_master.master and slave hps_0.f2h_axi_slave because the master is of type avalon and the slave is of type axi.
+Info: 2023.05.02.17:35:23 Info: Interconnect is inserted between master f2sdram_only_master.master and slave hps_0.f2h_sdram0_data because the master has address signal 32 bit wide, but the slave is 27 bit wide.
+Info: 2023.05.02.17:35:23 Info: Interconnect is inserted between master f2sdram_only_master.master and slave hps_0.f2h_sdram0_data because the master has readdata signal 32 bit wide, but the slave is 256 bit wide.
+Info: 2023.05.02.17:35:23 Info: Interconnect is inserted between master f2sdram_only_master.master and slave hps_0.f2h_sdram0_data because the master has writedata signal 32 bit wide, but the slave is 256 bit wide.
+Info: 2023.05.02.17:35:23 Info: Interconnect is inserted between master f2sdram_only_master.master and slave hps_0.f2h_sdram0_data because the master has byteenable signal 4 bit wide, but the slave is 32 bit wide.
+Warning: 2023.05.02.17:35:24 Warning: hps_0.f2h_irq0: Cannot connect clock for irq_mapper_001.sender
+Warning: 2023.05.02.17:35:24 Warning: hps_0.f2h_irq0: Cannot connect reset for irq_mapper_001.sender
+Warning: 2023.05.02.17:35:24 Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_002.sender
+Warning: 2023.05.02.17:35:24 Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_002.sender
+Info: 2023.05.02.17:35:31 Info: ILC: "soc_system" instantiated interrupt_latency_counter "ILC"
+Info: 2023.05.02.17:35:31 Info: button_pio: Starting RTL generation for module 'soc_system_button_pio'
+Info: 2023.05.02.17:35:31 Info: button_pio:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_button_pio --dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0002_button_pio_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0002_button_pio_gen//soc_system_button_pio_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0002_button_pio_gen
+Info: 2023.05.02.17:35:31 Info: button_pio: Done RTL generation for module 'soc_system_button_pio'
+Info: 2023.05.02.17:35:31 Info: button_pio: "soc_system" instantiated altera_avalon_pio "button_pio"
+Info: 2023.05.02.17:35:31 Info: dipsw_pio: Starting RTL generation for module 'soc_system_dipsw_pio'
+Info: 2023.05.02.17:35:31 Info: dipsw_pio:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_dipsw_pio --dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0003_dipsw_pio_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0003_dipsw_pio_gen//soc_system_dipsw_pio_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0003_dipsw_pio_gen
+Info: 2023.05.02.17:35:31 Info: dipsw_pio: Done RTL generation for module 'soc_system_dipsw_pio'
+Info: 2023.05.02.17:35:31 Info: dipsw_pio: "soc_system" instantiated altera_avalon_pio "dipsw_pio"
+Info: 2023.05.02.17:35:32 Info: f2sdram_only_master: "soc_system" instantiated altera_jtag_avalon_master "f2sdram_only_master"
+Info: 2023.05.02.17:35:32 Info: hps_0: "Running  for module: hps_0"
+Info: 2023.05.02.17:35:33 Info: hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2023.05.02.17:35:33 Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2023.05.02.17:35:33 Warning: hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2023.05.02.17:35:33 Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2023.05.02.17:35:36 Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
+Info: 2023.05.02.17:35:36 Info: jtag_uart: Starting RTL generation for module 'soc_system_jtag_uart'
+Info: 2023.05.02.17:35:36 Info: jtag_uart:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0004_jtag_uart_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0004_jtag_uart_gen//soc_system_jtag_uart_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0004_jtag_uart_gen
+Info: 2023.05.02.17:35:36 Info: jtag_uart: Done RTL generation for module 'soc_system_jtag_uart'
+Info: 2023.05.02.17:35:36 Info: jtag_uart: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: 2023.05.02.17:35:36 Info: led_pio: Starting RTL generation for module 'soc_system_led_pio'
+Info: 2023.05.02.17:35:36 Info: led_pio:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_led_pio --dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0005_led_pio_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0005_led_pio_gen//soc_system_led_pio_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0005_led_pio_gen
+Info: 2023.05.02.17:35:36 Info: led_pio: Done RTL generation for module 'soc_system_led_pio'
+Info: 2023.05.02.17:35:36 Info: led_pio: "soc_system" instantiated altera_avalon_pio "led_pio"
+Info: 2023.05.02.17:35:36 Info: mm_bridge_0: "soc_system" instantiated altera_avalon_mm_bridge "mm_bridge_0"
+Info: 2023.05.02.17:35:36 Info: sysid_qsys: "soc_system" instantiated altera_avalon_sysid_qsys "sysid_qsys"
+Info: 2023.05.02.17:35:38 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:35:39 Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: 2023.05.02.17:35:44 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:35:44 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:35:44 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:35:45 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:35:45 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:35:46 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:35:49 Info: mm_interconnect_1: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: 2023.05.02.17:35:51 Info: mm_interconnect_2: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: 2023.05.02.17:35:53 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:35:53 Info: mm_interconnect_3: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_3"
+Info: 2023.05.02.17:35:53 Info: irq_mapper: "soc_system" instantiated altera_irq_mapper "irq_mapper"
+Info: 2023.05.02.17:35:53 Info: irq_mapper_001: "soc_system" instantiated altera_irq_mapper "irq_mapper_001"
+Info: 2023.05.02.17:35:53 Info: irq_mapper_002: "soc_system" instantiated altera_irq_mapper "irq_mapper_002"
+Info: 2023.05.02.17:35:54 Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
+Info: 2023.05.02.17:35:54 Info: jtag_phy_embedded_in_jtag_master: "f2sdram_only_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: 2023.05.02.17:35:54 Info: timing_adt: "f2sdram_only_master" instantiated timing_adapter "timing_adt"
+Info: 2023.05.02.17:35:54 Info: fifo: "f2sdram_only_master" instantiated altera_avalon_sc_fifo "fifo"
+Info: 2023.05.02.17:35:54 Info: b2p: "f2sdram_only_master" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: 2023.05.02.17:35:54 Info: p2b: "f2sdram_only_master" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: 2023.05.02.17:35:54 Info: transacto: "f2sdram_only_master" instantiated altera_avalon_packets_to_master "transacto"
+Info: 2023.05.02.17:35:54 Info: b2p_adapter: "f2sdram_only_master" instantiated channel_adapter "b2p_adapter"
+Info: 2023.05.02.17:35:54 Info: p2b_adapter: "f2sdram_only_master" instantiated channel_adapter "p2b_adapter"
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: ]2;Altera Nios II EDS 17.0 [gcc4]C:/intelfpga/17.0/quartus/bin64/uniphy_mcc -ac_code sequencer_mc/ac_rom.s -inst_code sequencer_mc/inst_rom.s -ac_rom ../hps_AC_ROM.hex -inst_rom ../hps_inst_ROM.hex -header sequencer/sequencer_auto.h -vheader ../sequencer_auto_h.sv -ac_rom_init sequencer/sequencer_auto_ac_init.c -inst_rom_init sequencer
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: UniPHY Sequencer Microcode Compiler
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Copyright (C) 2017  Intel Corporation. All rights reserved.
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Reading sequencer_mc
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Reading sequencer_mc
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing ..
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing ..
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing sequencer
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Writing ..
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: Info: Microcode compilation successful
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: C:/intelfpga/17.0/quartus/../nios2eds/sdk2/bin
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: ????????????????
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0:
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: child process exited abnormally
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: s0: add_fileset_file: No such file C:/Users/25728/AppData/Local/Temp/alt9479_6179736015856784517.dir/0005_s0_gen
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Error during execution of script generate_hps_sdram.tcl: Generation stopped, 10 or more modules remaining
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Execution of script generate_hps_sdram.tcl failed
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:35:54 Info:
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: ********************************************************************************************************************
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces:
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Use qsys-generate for a simpler command-line interface for generating IP.
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces:
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: Run ip-generate with switch --remove-qsys-generate-warning to prevent this notice from appearing in subsequent runs.
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces:
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: ********************************************************************************************************************
+Warning: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:35:56 Warning: Ignored parameter assignment device=5CSXFC6D6F31C6
+Warning: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:35:56 Warning: Ignored parameter assignment extended_family_support=true
+Warning: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Warning: hps_sdram: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Info: hps_sdram.pll_ref_clk: Elaborate: altera_clock_source
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Info: hps_sdram.pll_ref_clk:            $Revision: #1 $
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Info: hps_sdram.pll_ref_clk:            $Date: 2017/01
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Info: hps_sdram.global_reset: Elaborate: altera_reset_source
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Info: hps_sdram.global_reset:            $Revision: #1 $
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Info: hps_sdram.global_reset:            $Date: 2017/01
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Info: hps_sdram.global_reset: Reset is negatively asserted.
+Warning: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Warning: hps_sdram.p0: p0.oct_sharing must be exported, or connected to a matching conduit.
+Warning: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Warning: hps_sdram.p0: p0.io_int must be exported, or connected to a matching conduit.
+Warning: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Warning: hps_sdram.sequencer_mem: sequencer_mem.clken1 must be exported, or connected to a matching conduit.
+Warning: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Warning: hps_sdram.oct: oct.oct must be exported, or connected to a matching conduit.
+Warning: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Warning: hps_sdram.oct: oct.oct_sharing must be exported, or connected to a matching conduit.
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:01 Info: hps_sdram: Generating altera_mem_if_hps_emif "hps_sdram" for SIM_VERILOG
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:05 Info: Interconnect is inserted between master s0.mmr_avl and slave c0.csr because the master has burstcount signal 1 bit wide, but the slave is 0 bit wide.
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:08 Info: pll_ref_clk: "hps_sdram" instantiated altera_avalon_clock_source "pll_ref_clk"
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:08 Info: global_reset: "hps_sdram" instantiated altera_avalon_reset_source "global_reset"
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:08 Info: Reusing file C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0020_fpga_interfaces_gen/submodules
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:08 Info: pll: "hps_sdram" instantiated altera_mem_if_hps_pll "pll"
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:08 Info: p0: Generating clock pair generator
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:09 Info: p0: Generating hps_sdram_p0_altdqdqs
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:12 Info: p0: "hps_sdram" instantiated altera_mem_if_ddr3_hard_phy_core "p0"
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: ]2;Altera Nios II EDS 17.0 [gcc4]C:/intelfpga/17.0/quartus/bin64/uniphy_mcc -ac_code sequencer_mc/ac_rom.s -inst_code sequencer_mc/inst_rom.s -ac_rom ../hps_AC_ROM.hex -inst_rom ../hps_inst_ROM.hex -header sequencer/sequencer_auto.h -vheader ../sequencer_auto_h.sv -ac_rom_init sequencer/sequencer_auto_ac_init.c -inst_rom_init sequencer
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: UniPHY Sequencer Microcode Compiler
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: Copyright (C) 2017  Intel Corporation. All rights reserved.
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: Info: Reading sequencer_mc
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: Info: Reading sequencer_mc
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: Info: Writing ..
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: Info: Writing ..
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: Info: Writing sequencer
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: Info: Writing sequencer
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: Info: Writing sequencer
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: Info: Writing sequencer
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: Info: Writing ..
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: Info: Microcode compilation successful
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: C:/intelfpga/17.0/quartus/../nios2eds/sdk2/bin
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: ????????????????
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0:
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: child process exited abnormally
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: s0: add_fileset_file: No such file C:/Users/25728/AppData/Local/Temp/alt9479_6179736015856784517.dir/0005_s0_gen
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: while executing
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: "add_fileset_file $file_name [::alt_mem_if::util::hwtcl_utils::get_file_type $file_name 0] PATH $file_pathname"
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: ("foreach" body line 4)
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: invoked from within
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: "foreach file_pathname $return_files_sw {
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces:         _dprint 1 "Preparing to add $file_pathname"
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces:         set file_name [file tail $file_pathname]
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces:         add_fileset_file $..."
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: (procedure "generate_sw" line 18)
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: invoked from within
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: "generate_sw $name $fileset"
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: (procedure "generate_files" line 37)
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: invoked from within
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: "generate_files $name SIM_VERILOG"
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: (procedure "generate_verilog_sim" line 3)
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: invoked from within
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: "generate_verilog_sim altera_mem_if_hhp_qseq_top"
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Info: s0: "hps_sdram" instantiated altera_mem_if_hhp_ddr3_qseq "s0"
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Error: Generation stopped, 10 or more modules remaining
+Error: 2023.05.02.17:36:17 Error: fpga_interfaces: 2023.05.02.17:36:17 Info: hps_sdram: Done "hps_sdram" with 16 modules, 61 files
+Info: 2023.05.02.17:36:17 Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Error: 2023.05.02.17:36:17 Error: Generation stopped, 102 or more modules remaining
+Info: 2023.05.02.17:36:17 Info: soc_system: Done "soc_system" with 62 modules, 114 files
+Error: 2023.05.02.17:36:17 Error: qsys-generate failed with exit code 1: 95 Errors, 10 Warnings
+Info: 2023.05.02.17:36:17 Info: Finished: Create simulation model
+2023.05.02.17:36:17 Info: Starting: Create Modelsim Project.
+Info: 2023.05.02.17:36:17 Info: Doing: ip-make-simscript --spd=A:\OneDrive - whu.edu.cn\whu\EI\Cyclone5DE10\Demonstration\SoC_FPGA\DE10_Standard_GHRD\soc_system\soc_system.spd --output-directory=A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/simulation
+Info: 2023.05.02.17:36:18 Info: Generating the following file(s) for MODELSIM simulator in A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/simulation
+Info: 2023.05.02.17:36:18 Info:     mentor
+Info: 2023.05.02.17:36:18 Info: Generating the following file(s) for VCS simulator in A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/simulation
+Info: 2023.05.02.17:36:18 Info:     synopsys/vcs
+Info: 2023.05.02.17:36:18 Info: Generating the following file(s) for VCSMX simulator in A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/simulation
+Info: 2023.05.02.17:36:18 Info:     synopsys/vcsmx
+Info: 2023.05.02.17:36:18 Info:     synopsys/vcsmx
+Info: 2023.05.02.17:36:18 Info: Generating the following file(s) for NCSIM simulator in A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/simulation
+Info: 2023.05.02.17:36:18 Info:     cadence
+Info: 2023.05.02.17:36:18 Info:     cadence
+Info: 2023.05.02.17:36:18 Info:     cadence
+Info: 2023.05.02.17:36:18 Info:     27 .cds.lib files in cadence/cds_libs
+Info: 2023.05.02.17:36:18 Info: Generating the following file(s) for RIVIERA simulator in A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/simulation
+Info: 2023.05.02.17:36:18 Info:     aldec
+Info: 2023.05.02.17:36:18 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/simulation
+Info: 2023.05.02.17:36:18 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2023.05.02.17:36:18 Info: Finished: Create Modelsim Project.
+Info: 2023.05.02.17:36:18 Info: Starting: Create block symbol file (.bsf)
+Info: 2023.05.02.17:36:18 Info: qsys-generate "A:\OneDrive - whu.edu.cn\whu\EI\Cyclone5DE10\Demonstration\SoC_FPGA\DE10_Standard_GHRD\soc_system.qsys" --block-symbol-file --output-directory="A:\OneDrive - whu.edu.cn\whu\EI\Cyclone5DE10\Demonstration\SoC_FPGA\DE10_Standard_GHRD\soc_system" --family="Cyclone V" --part=5CSXFC6D6F31C6
+Info: 2023.05.02.17:36:18 Info: Loading DE10_Standard_GHRD
+Info: 2023.05.02.17:36:18 Info: Reading input file
+Info: 2023.05.02.17:36:18 Info: Adding ILC [interrupt_latency_counter 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module ILC
+Info: 2023.05.02.17:36:18 Info: Adding button_pio [altera_avalon_pio 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module button_pio
+Info: 2023.05.02.17:36:18 Info: Adding clk_0 [clock_source 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module clk_0
+Info: 2023.05.02.17:36:18 Info: Adding dipsw_pio [altera_avalon_pio 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module dipsw_pio
+Info: 2023.05.02.17:36:18 Info: Adding f2sdram_only_master [altera_jtag_avalon_master 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module f2sdram_only_master
+Info: 2023.05.02.17:36:18 Info: Adding fpga_only_master [altera_jtag_avalon_master 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module fpga_only_master
+Info: 2023.05.02.17:36:18 Info: Adding hps_0 [altera_hps 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module hps_0
+Info: 2023.05.02.17:36:18 Info: Adding hps_only_master [altera_jtag_avalon_master 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module hps_only_master
+Info: 2023.05.02.17:36:18 Info: Adding jtag_uart [altera_avalon_jtag_uart 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module jtag_uart
+Info: 2023.05.02.17:36:18 Info: Adding led_pio [altera_avalon_pio 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module led_pio
+Info: 2023.05.02.17:36:18 Info: Adding mm_bridge_0 [altera_avalon_mm_bridge 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module mm_bridge_0
+Info: 2023.05.02.17:36:18 Info: Adding sysid_qsys [altera_avalon_sysid_qsys 17.0]
+Info: 2023.05.02.17:36:18 Info: Parameterizing module sysid_qsys
+Info: 2023.05.02.17:36:18 Info: Building connections
+Info: 2023.05.02.17:36:18 Info: Parameterizing connections
+Info: 2023.05.02.17:36:18 Info: Validating
+Info: 2023.05.02.17:36:26 Info: Done reading input file
+Info: 2023.05.02.17:36:30 Info: soc_system.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2023.05.02.17:36:30 Info: soc_system.dipsw_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2023.05.02.17:36:30 Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2023.05.02.17:36:30 Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2023.05.02.17:36:30 Warning: soc_system.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2023.05.02.17:36:30 Warning: soc_system.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2023.05.02.17:36:30 Info: soc_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: 2023.05.02.17:36:30 Info: soc_system.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: 2023.05.02.17:36:30 Info: soc_system.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Info: 2023.05.02.17:36:31 Info: qsys-generate succeeded.
+Info: 2023.05.02.17:36:31 Info: Finished: Create block symbol file (.bsf)
+Info: 2023.05.02.17:36:31 Info:
+Info: 2023.05.02.17:36:31 Info: Starting: Create HDL design files for synthesis
+Info: 2023.05.02.17:36:31 Info: qsys-generate "A:\OneDrive - whu.edu.cn\whu\EI\Cyclone5DE10\Demonstration\SoC_FPGA\DE10_Standard_GHRD\soc_system.qsys" --synthesis=VERILOG --output-directory="A:\OneDrive - whu.edu.cn\whu\EI\Cyclone5DE10\Demonstration\SoC_FPGA\DE10_Standard_GHRD\soc_system\synthesis" --family="Cyclone V" --part=5CSXFC6D6F31C6
+Info: 2023.05.02.17:36:31 Info: Loading DE10_Standard_GHRD
+Info: 2023.05.02.17:36:31 Info: Reading input file
+Info: 2023.05.02.17:36:31 Info: Adding ILC [interrupt_latency_counter 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module ILC
+Info: 2023.05.02.17:36:31 Info: Adding button_pio [altera_avalon_pio 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module button_pio
+Info: 2023.05.02.17:36:31 Info: Adding clk_0 [clock_source 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module clk_0
+Info: 2023.05.02.17:36:31 Info: Adding dipsw_pio [altera_avalon_pio 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module dipsw_pio
+Info: 2023.05.02.17:36:31 Info: Adding f2sdram_only_master [altera_jtag_avalon_master 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module f2sdram_only_master
+Info: 2023.05.02.17:36:31 Info: Adding fpga_only_master [altera_jtag_avalon_master 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module fpga_only_master
+Info: 2023.05.02.17:36:31 Info: Adding hps_0 [altera_hps 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module hps_0
+Info: 2023.05.02.17:36:31 Info: Adding hps_only_master [altera_jtag_avalon_master 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module hps_only_master
+Info: 2023.05.02.17:36:31 Info: Adding jtag_uart [altera_avalon_jtag_uart 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module jtag_uart
+Info: 2023.05.02.17:36:31 Info: Adding led_pio [altera_avalon_pio 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module led_pio
+Info: 2023.05.02.17:36:31 Info: Adding mm_bridge_0 [altera_avalon_mm_bridge 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module mm_bridge_0
+Info: 2023.05.02.17:36:31 Info: Adding sysid_qsys [altera_avalon_sysid_qsys 17.0]
+Info: 2023.05.02.17:36:31 Info: Parameterizing module sysid_qsys
+Info: 2023.05.02.17:36:31 Info: Building connections
+Info: 2023.05.02.17:36:31 Info: Parameterizing connections
+Info: 2023.05.02.17:36:31 Info: Validating
+Info: 2023.05.02.17:36:39 Info: Done reading input file
+Info: 2023.05.02.17:36:43 Info: soc_system.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2023.05.02.17:36:43 Info: soc_system.dipsw_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2023.05.02.17:36:43 Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2023.05.02.17:36:43 Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2023.05.02.17:36:43 Warning: soc_system.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2023.05.02.17:36:43 Warning: soc_system.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2023.05.02.17:36:43 Info: soc_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: 2023.05.02.17:36:43 Info: soc_system.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: 2023.05.02.17:36:43 Info: soc_system.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Info: 2023.05.02.17:36:44 Info: soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
+Info: 2023.05.02.17:36:49 Info: Interconnect is inserted between master hps_0.h2f_lw_axi_master and slave mm_bridge_0.s0 because the master is of type axi and the slave is of type avalon.
+Info: 2023.05.02.17:36:53 Info: Interconnect is inserted between master hps_only_master.master and slave hps_0.f2h_axi_slave because the master is of type avalon and the slave is of type axi.
+Info: 2023.05.02.17:36:54 Info: Interconnect is inserted between master f2sdram_only_master.master and slave hps_0.f2h_sdram0_data because the master has address signal 32 bit wide, but the slave is 27 bit wide.
+Info: 2023.05.02.17:36:54 Info: Interconnect is inserted between master f2sdram_only_master.master and slave hps_0.f2h_sdram0_data because the master has readdata signal 32 bit wide, but the slave is 256 bit wide.
+Info: 2023.05.02.17:36:54 Info: Interconnect is inserted between master f2sdram_only_master.master and slave hps_0.f2h_sdram0_data because the master has writedata signal 32 bit wide, but the slave is 256 bit wide.
+Info: 2023.05.02.17:36:54 Info: Interconnect is inserted between master f2sdram_only_master.master and slave hps_0.f2h_sdram0_data because the master has byteenable signal 4 bit wide, but the slave is 32 bit wide.
+Warning: 2023.05.02.17:36:54 Warning: hps_0.f2h_irq0: Cannot connect clock for irq_mapper_001.sender
+Warning: 2023.05.02.17:36:54 Warning: hps_0.f2h_irq0: Cannot connect reset for irq_mapper_001.sender
+Warning: 2023.05.02.17:36:54 Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_002.sender
+Warning: 2023.05.02.17:36:54 Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_002.sender
+Info: 2023.05.02.17:37:02 Info: ILC: "soc_system" instantiated interrupt_latency_counter "ILC"
+Info: 2023.05.02.17:37:02 Info: button_pio: Starting RTL generation for module 'soc_system_button_pio'
+Info: 2023.05.02.17:37:02 Info: button_pio:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_button_pio --dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0023_button_pio_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0023_button_pio_gen/
+Info: 2023.05.02.17:37:02 Info: button_pio: Done RTL generation for module 'soc_system_button_pio'
+Info: 2023.05.02.17:37:02 Info: button_pio: "soc_system" instantiated altera_avalon_pio "button_pio"
+Info: 2023.05.02.17:37:02 Info: dipsw_pio: Starting RTL generation for module 'soc_system_dipsw_pio'
+Info: 2023.05.02.17:37:02 Info: dipsw_pio:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_dipsw_pio --dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0024_dipsw_pio_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0024_dipsw_pio_gen/
+Info: 2023.05.02.17:37:03 Info: dipsw_pio: Done RTL generation for module 'soc_system_dipsw_pio'
+Info: 2023.05.02.17:37:03 Info: dipsw_pio: "soc_system" instantiated altera_avalon_pio "dipsw_pio"
+Info: 2023.05.02.17:37:04 Info: f2sdram_only_master: "soc_system" instantiated altera_jtag_avalon_master "f2sdram_only_master"
+Info: 2023.05.02.17:37:04 Info: hps_0: "Running  for module: hps_0"
+Info: 2023.05.02.17:37:04 Info: hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2023.05.02.17:37:04 Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2023.05.02.17:37:04 Warning: hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2023.05.02.17:37:04 Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2023.05.02.17:37:07 Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
+Info: 2023.05.02.17:37:07 Info: jtag_uart: Starting RTL generation for module 'soc_system_jtag_uart'
+Info: 2023.05.02.17:37:07 Info: jtag_uart:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0025_jtag_uart_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0025_jtag_uart_gen/
+Info: 2023.05.02.17:37:08 Info: jtag_uart: Done RTL generation for module 'soc_system_jtag_uart'
+Info: 2023.05.02.17:37:08 Info: jtag_uart: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: 2023.05.02.17:37:08 Info: led_pio: Starting RTL generation for module 'soc_system_led_pio'
+Info: 2023.05.02.17:37:08 Info: led_pio:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_led_pio --dir=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0026_led_pio_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/25728/AppData/Local/Temp/alt9479_76908779493597656.dir/0026_led_pio_gen/
+Info: 2023.05.02.17:37:08 Info: led_pio: Done RTL generation for module 'soc_system_led_pio'
+Info: 2023.05.02.17:37:08 Info: led_pio: "soc_system" instantiated altera_avalon_pio "led_pio"
+Info: 2023.05.02.17:37:08 Info: mm_bridge_0: "soc_system" instantiated altera_avalon_mm_bridge "mm_bridge_0"
+Info: 2023.05.02.17:37:08 Info: sysid_qsys: "soc_system" instantiated altera_avalon_sysid_qsys "sysid_qsys"
+Info: 2023.05.02.17:37:10 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:37:11 Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: 2023.05.02.17:37:17 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:37:17 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:37:18 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:37:19 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:37:19 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:37:20 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:37:24 Info: mm_interconnect_1: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: 2023.05.02.17:37:26 Info: mm_interconnect_2: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: 2023.05.02.17:37:28 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2023.05.02.17:37:29 Info: mm_interconnect_3: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_3"
+Info: 2023.05.02.17:37:29 Info: irq_mapper: "soc_system" instantiated altera_irq_mapper "irq_mapper"
+Info: 2023.05.02.17:37:29 Info: irq_mapper_001: "soc_system" instantiated altera_irq_mapper "irq_mapper_001"
+Info: 2023.05.02.17:37:29 Info: irq_mapper_002: "soc_system" instantiated altera_irq_mapper "irq_mapper_002"
+Info: 2023.05.02.17:37:29 Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
+Info: 2023.05.02.17:37:29 Info: jtag_phy_embedded_in_jtag_master: "f2sdram_only_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: 2023.05.02.17:37:29 Info: timing_adt: "f2sdram_only_master" instantiated timing_adapter "timing_adt"
+Info: 2023.05.02.17:37:29 Info: fifo: "f2sdram_only_master" instantiated altera_avalon_sc_fifo "fifo"
+Info: 2023.05.02.17:37:29 Info: b2p: "f2sdram_only_master" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: 2023.05.02.17:37:29 Info: p2b: "f2sdram_only_master" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: 2023.05.02.17:37:29 Info: transacto: "f2sdram_only_master" instantiated altera_avalon_packets_to_master "transacto"
+Info: 2023.05.02.17:37:29 Info: b2p_adapter: "f2sdram_only_master" instantiated channel_adapter "b2p_adapter"
+Info: 2023.05.02.17:37:29 Info: p2b_adapter: "f2sdram_only_master" instantiated channel_adapter "p2b_adapter"
+Info: 2023.05.02.17:37:29 Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: 2023.05.02.17:37:31 Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: 2023.05.02.17:37:31 Info: mm_bridge_0_s0_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "mm_bridge_0_s0_translator"
+Info: 2023.05.02.17:37:31 Info: hps_0_h2f_lw_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_lw_axi_master_agent"
+Info: 2023.05.02.17:37:31 Info: mm_bridge_0_s0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "mm_bridge_0_s0_agent"
+Info: 2023.05.02.17:37:31 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: 2023.05.02.17:37:31 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: 2023.05.02.17:37:31 Info: mm_bridge_0_s0_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "mm_bridge_0_s0_burst_adapter"
+Info: 2023.05.02.17:37:31 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:31 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:31 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:31 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2023.05.02.17:37:31 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2023.05.02.17:37:31 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: 2023.05.02.17:37:31 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2023.05.02.17:37:31 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: 2023.05.02.17:37:32 Info: mm_bridge_0_m0_translator: "mm_interconnect_1" instantiated altera_merlin_master_translator "mm_bridge_0_m0_translator"
+Info: 2023.05.02.17:37:32 Info: mm_bridge_0_m0_agent: "mm_interconnect_1" instantiated altera_merlin_master_agent "mm_bridge_0_m0_agent"
+Info: 2023.05.02.17:37:32 Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: 2023.05.02.17:37:32 Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: 2023.05.02.17:37:32 Info: mm_bridge_0_m0_limiter: "mm_interconnect_1" instantiated altera_merlin_traffic_limiter "mm_bridge_0_m0_limiter"
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2023.05.02.17:37:32 Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: 2023.05.02.17:37:32 Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: hps_0_f2h_axi_slave_agent: "mm_interconnect_2" instantiated altera_merlin_axi_slave_ni "hps_0_f2h_axi_slave_agent"
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: router: "mm_interconnect_2" instantiated altera_merlin_router "router"
+Info: 2023.05.02.17:37:32 Info: router_001: "mm_interconnect_2" instantiated altera_merlin_router "router_001"
+Info: 2023.05.02.17:37:32 Info: cmd_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2023.05.02.17:37:32 Info: cmd_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: rsp_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: 2023.05.02.17:37:32 Info: rsp_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: hps_0_f2h_axi_slave_wr_cmd_width_adapter: "mm_interconnect_2" instantiated altera_merlin_width_adapter "hps_0_f2h_axi_slave_wr_cmd_width_adapter"
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: router: "mm_interconnect_3" instantiated altera_merlin_router "router"
+Info: 2023.05.02.17:37:32 Info: router_001: "mm_interconnect_3" instantiated altera_merlin_router "router_001"
+Info: 2023.05.02.17:37:32 Info: cmd_demux: "mm_interconnect_3" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2023.05.02.17:37:32 Info: cmd_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:32 Info: rsp_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2023.05.02.17:37:32 Info: Reusing file A:/OneDrive - whu.edu.cn/whu/EI/Cyclone5DE10/Demonstration/SoC_FPGA/DE10_Standard_GHRD/soc_system/synthesis/submodules
+Info: 2023.05.02.17:37:33 Info: avalon_st_adapter: "mm_interconnect_3" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: 2023.05.02.17:37:48 Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: 2023.05.02.17:37:48 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: 2023.05.02.17:37:48 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: 2023.05.02.17:37:48 Info: soc_system: Done "soc_system" with 65 modules, 133 files
+Info: 2023.05.02.17:37:48 Info: qsys-generate succeeded.
+Info: 2023.05.02.17:37:48 Info: Finished: Create HDL design files for synthesis
+Info (11904): Restoring file "soc_system.BAK.qsys" to "soc_system.qsys"
+Error (14923): Error upgrading Qsys file "soc_system.qsys"
+Info (11131): Completed upgrading IP component In-System Sources and Probes with file "ip/altsource_probe/hps_reset.v"
+Error (11890): Unable to automatically upgrade Qsys component. Please manually upgrade "soc_system.qsys" in Qsys
+Error (23031): Evaluation of Tcl script c:/intelfpga/17.0/quartus/common/tcl/internal/ip_regen/ip_regen.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 91 errors, 31 warnings
+    Error: Peak virtual memory: 4882 megabytes
+    Error: Processing ended: Tue May 02 17:37:53 2023
+    Error: Elapsed time: 00:03:29
+    Error: Total CPU time (on all processors): 00:03:38
+
+

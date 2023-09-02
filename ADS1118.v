@@ -1,0 +1,94 @@
+module ADS1118
+(
+	input CLK_50M, 
+	input rst_n,
+	input [15:0]ADconfig,
+	output reg CLK_50k,
+	output reg MOSI,   //slave input master output （master为FPGA）write config to AD,Din
+	output SCLK,   //时钟
+	input  MISO,   //slave output master input  Dout
+	output reg CS, //片选（低电平有效）
+	output reg [15:0]ADdata
+);
+reg [8:0]clkcnt;
+reg [5:0]cnt;
+reg [15:0]config_reg;
+reg [15:0]data_reg;
+
+
+always @(posedge CLK_50M ) begin
+	clkcnt<=(clkcnt<499)?clkcnt+1:0;
+	CLK_50k<=(clkcnt==0)?~CLK_50k:CLK_50k;
+end
+
+assign SCLK=(cnt>1&&cnt<18)?CLK_50k:0;
+
+always@(posedge CLK_50k)
+begin
+	cnt<=(cnt<57)?cnt+1:0;
+	CS<=(cnt<20)?0:1;
+end
+
+always @(posedge CLK_50k or negedge rst_n ) begin
+	if(!rst_n)begin
+		config_reg<=0;
+		MOSI<=0;
+	end
+	else begin
+		case (cnt)
+			0:begin
+				config_reg<=ADconfig;
+				MOSI<=1'b0;
+			end 
+			1:MOSI<=config_reg [15];
+			2:MOSI<=config_reg [14];
+			3:MOSI<=config_reg [13];
+			4:MOSI<=config_reg [12];
+			5:MOSI<=config_reg [11];
+			6:MOSI<=config_reg [10];
+			7:MOSI<=config_reg [9];
+			8:MOSI<=config_reg [8];
+			9:MOSI<=config_reg [7];
+			10:MOSI<=config_reg[6];
+			11:MOSI<=config_reg[5];
+			12:MOSI<=config_reg[4];
+			13:MOSI<=config_reg[3];
+			14:MOSI<=config_reg[2];
+			15:MOSI<=config_reg[1];
+			16:MOSI<=config_reg[0];
+			default: MOSI<=1'b0;
+		endcase
+	end
+end
+
+always @(negedge CLK_50k or negedge rst_n ) begin
+	if(!rst_n)begin
+		data_reg<=0;
+	end
+	else begin
+		case (cnt)
+			0:begin
+				ADdata<=data_reg;
+			end 
+			2 :data_reg[15]<=MISO;
+			3 :data_reg[14]<=MISO;
+			4 :data_reg[13]<=MISO;
+			5 :data_reg[12]<=MISO;
+			6 :data_reg[11]<=MISO;
+			7 :data_reg[10]<=MISO;
+			8 :data_reg[9]<=MISO;
+			9 :data_reg[8]<=MISO;
+			10:data_reg[7]<=MISO;
+			11:data_reg[6]<=MISO;
+			12:data_reg[5]<=MISO;
+			13:data_reg[4]<=MISO;
+			14:data_reg[3]<=MISO;
+			15:data_reg[2]<=MISO;
+			16:data_reg[1]<=MISO;
+			17:data_reg[0]<=MISO;
+			default:;
+		endcase
+	end
+end
+
+endmodule 

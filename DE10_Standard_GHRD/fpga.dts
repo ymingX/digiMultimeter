@@ -1,0 +1,152 @@
+/* 
+ * Copyright Altera Corporation (C) 2015. All rights reserved. 
+ * 
+ * This program is free software; you can redistribute it and/or modify 
+ * it under the terms and conditions of the GNU General Public License, 
+ * version 2, as published by the Free Software Foundation. 
+ * 
+ * This program is distributed in the hope it will be useful, but WITHOUT 
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for 
+ * more details. 
+ * 
+ * You should have received a copy of the GNU General Public License along with 
+ * this program.  If not, see <http://www.gnu.org/licenses/>. 
+ */ 
+ 
+ /dts-v1/ /plugin/; 
+/ { 
+ 
+   fragment@0 { 
+      target-path = "/soc/base-fpga-region"; 
+ 
+      #address-cells = <2>; 
+      #size-cells = <1>; 
+      __overlay__ { 
+         #address-cells = <2>; 
+         #size-cells = <1>; 
+ 
+			firmware-name = "soc_system.rbf"; 
+			jtag_uart: serial@0x100020000 {
+				compatible = "altr,juart-16.1", "altr,juart-1.0";
+				reg = <0x00000001 0x00020000 0x00000008>;
+				interrupt-parent = <&intc>;
+				interrupts = <0 42 4>;
+				clocks = <&clk_0>;
+			}; //end serial@0x100020000 (jtag_uart)
+
+			ILC: ilc@0x100030000 {
+				compatible = "altr,altera_ilc-16.1", "altr,ilc-1.0";
+				reg = <0x00000001 0x00030000 0x00000100>;
+				interrupt-parent = <&intc>;
+				interrupts = <0 40 1 0 41 1 0 42 4>;
+				interrupt-names = "dipsw_pio", "button_pio", "jtag_uart";
+				interrupt-controller;
+				#interrupt-cells = <1>;
+				clocks = <&clk_0>;
+				altr,sw-fifo-depth = <32>;	/* embeddedsw.dts.params.altr,sw-fifo-depth type NUMBER */
+			}; //end ilc@0x100030000 (ILC)       
+			sysid_qsys: sysid@0x100010000 {
+					compatible = "altr,sysid-16.1", "altr,sysid-1.0";
+					reg = <0x00000001 0x00010000 0x00000008>;
+					clocks = <&clk_0>;
+					id = <2899645186>;	/* embeddedsw.dts.params.id type NUMBER */
+					timestamp = <1492502516>;	/* embeddedsw.dts.params.timestamp type NUMBER */
+			}; //end sysid@0x100010000 (sysid_qsys)
+			button_pio: gpio@0x100005000 {
+				compatible = "altr,pio-16.1", "altr,pio-1.0";
+				reg = <0x00000001 0x00005000 0x00000010>;
+				interrupt-parent = <&intc>;
+				interrupts = <0 41 1>;
+				clocks = <&clk_0>;
+				altr,gpio-bank-width = <4>;	/* embeddedsw.dts.params.altr,gpio-bank-width type NUMBER */
+				altr,interrupt-type = <2>;	/* embeddedsw.dts.params.altr,interrupt-type type NUMBER */
+				altr,interrupt_type = <2>;	/* embeddedsw.dts.params.altr,interrupt_type type NUMBER */
+				edge_type = <1>;	/* embeddedsw.dts.params.edge_type type NUMBER */
+				level_trigger = <0>;	/* embeddedsw.dts.params.level_trigger type NUMBER */
+				resetvalue = <0>;	/* embeddedsw.dts.params.resetvalue type NUMBER */
+				#gpio-cells = <2>;
+				gpio-controller;
+			}; //end gpio@0x100005000 (button_pio)
+
+			dipsw_pio: gpio@0x100004000 {
+				compatible = "altr,pio-16.1", "altr,pio-1.0";
+				reg = <0x00000001 0x00004000 0x00000010>;
+				interrupt-parent = <&intc>;
+				interrupts = <0 40 1>;
+				clocks = <&clk_0>;
+				altr,gpio-bank-width = <10>;	/* embeddedsw.dts.params.altr,gpio-bank-width type NUMBER */
+				altr,interrupt-type = <3>;	/* embeddedsw.dts.params.altr,interrupt-type type NUMBER */
+				altr,interrupt_type = <3>;	/* embeddedsw.dts.params.altr,interrupt_type type NUMBER */
+				edge_type = <2>;	/* embeddedsw.dts.params.edge_type type NUMBER */
+				level_trigger = <0>;	/* embeddedsw.dts.params.level_trigger type NUMBER */
+				resetvalue = <0>;	/* embeddedsw.dts.params.resetvalue type NUMBER */
+				#gpio-cells = <2>;
+				gpio-controller;
+			}; //end gpio@0x100004000 (dipsw_pio)
+
+			led_pio: gpio@0x100003000 {
+				compatible = "altr,pio-16.1", "altr,pio-1.0";
+				reg = <0x00000001 0x00003000 0x00000010>;
+				clocks = <&clk_0>;
+				altr,gpio-bank-width = <10>;	/* embeddedsw.dts.params.altr,gpio-bank-width type NUMBER */
+				resetvalue = <15>;	/* embeddedsw.dts.params.resetvalue type NUMBER */
+				#gpio-cells = <2>;
+				gpio-controller;
+			}; //end gpio@0x100003000 (led_pio)
+			fpga_leds: leds {
+			compatible = "gpio-leds";	/* appended from boardinfo */
+			led_fpga0: fpga0 {
+				label = "fpga_led0";	/* appended from boardinfo */
+				gpios = <&led_pio 0 0>;	/* appended from boardinfo */
+			}; //end fpga0 (led_fpga0)
+
+			led_fpga1: fpga1 {
+				label = "fpga_led1";	/* appended from boardinfo */
+				gpios = <&led_pio 1 0>;	/* appended from boardinfo */
+			}; //end fpga1 (led_fpga1)
+
+			led_fpga2: fpga2 {
+				label = "fpga_led2";	/* appended from boardinfo */
+				gpios = <&led_pio 2 0>;	/* appended from boardinfo */
+			}; //end fpga2 (led_fpga2)
+
+			led_fpga3: fpga3 {
+				label = "fpga_led3";	/* appended from boardinfo */
+				gpios = <&led_pio 3 0>;	/* appended from boardinfo */
+			}; //end fpga3 (led_fpga3)
+
+			led_fpga4: fpga4 {
+				label = "fpga_led4";	/* appended from boardinfo */
+				gpios = <&led_pio 4 0>;	/* appended from boardinfo */
+			}; //end fpga4 (led_fpga4)
+
+			led_fpga5: fpga5 {
+				label = "fpga_led5";	/* appended from boardinfo */
+				gpios = <&led_pio 5 0>;	/* appended from boardinfo */
+			}; //end fpga5 (led_fpga5)
+
+			led_fpga6: fpga6 {
+				label = "fpga_led6";	/* appended from boardinfo */
+				gpios = <&led_pio 6 0>;	/* appended from boardinfo */
+			}; //end fpga6 (led_fpga6)
+
+			led_fpga7: fpga7 {
+				label = "fpga_led7";	/* appended from boardinfo */
+				gpios = <&led_pio 7 0>;	/* appended from boardinfo */
+			}; //end fpga7 (led_fpga7)
+
+			led_fpga8: fpga8 {
+				label = "fpga_led8";	/* appended from boardinfo */
+				gpios = <&led_pio 8 0>;	/* appended from boardinfo */
+			}; //end fpga8 (led_fpga8)
+
+			led_fpga9: fpga9 {
+				label = "fpga_led9";	/* appended from boardinfo */
+				gpios = <&led_pio 9 0>;	/* appended from boardinfo */
+			}; //end fpga9 (led_fpga9)
+		}; //end leds (soc_leds)
+      }; 
+ 
+   }; 
+};
